@@ -1,0 +1,30 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <title>Receitas - Foodfy</title>
+{% endblock head %}
+
+{% block content %}
+
+    <div class="title-cards">
+        <h4>Gerenciar Receitas</h4>
+    </div>
+
+    <section class="main_cards">
+        {% for item in items %}
+            <div class="card" name="{{item.title}}" name2="{{item.author}}">
+                <div class="card-img" id="{{item.id}}">
+                    <img src="{{item.image}}" alt="burger">
+                </div>
+                <div class="card-content">
+                    <p>{{item.title}}</p>
+                    <p>{{item.author}}</p>
+                    <span class="view-card" id="{{item.id}}">Visualizar</span>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <script src="/scripts/scriptAdmin.js"></script>
+
+{% endblock content %}

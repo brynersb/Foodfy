@@ -1,0 +1,184 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+:root {
+    --collor-font-normal: #111111;
+    --collor-font-small: #777777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    padding: 27px;
+    min-width: 1400px;
+    height: 80px;
+    background-color:#111111;
+    position: relative;
+}
+
+header .logo{
+margin-left: 204px;
+
+}
+.title-card{
+    display: flex;
+}
+.title-cards h4 {
+    width: 400px;
+    font-weight: bold;
+    font-size: 24px;    
+    color: var(--collor-font-normal);
+    margin-left: 204px;
+    margin-top:23px;
+    margin-bottom: 30px;
+    padding: 27px;
+}
+
+.title-card a{
+    font-size: 16px;
+    width: 136px;
+    height: 37px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 20px 9px 20px;
+    background-color: #857bcc;
+    border-radius: 4px;
+    margin-left: 500px;
+    text-align: center;
+}
+
+.main_cards{
+    max-width: 840px;
+    margin: 0 230px 0 230px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px
+}
+
+.card{
+    max-width: 335px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+      
+}
+
+.card img {
+    width: 172px;
+    height: 80px;
+    border-radius: 8.57px;
+  
+}
+
+.card-img{
+    max-width: 173px;
+}
+
+.card-content{
+    margin-left: 20px;
+}
+
+.card-content p:first-child{
+    margin-bottom: 1px;
+}
+
+.card-content p:nth-child(2){
+    font-size: 14px;
+    color: #777777;
+}
+
+.card-content .view-card{
+    margin-top:10px;
+    cursor: pointer;
+}
+
+span.view-card{
+    color:#6558C3;
+    display: block;
+}
+
+/*###===Recipe === */
+
+.title-card{
+    
+    font-weight: bold;
+    font-size: 24px;    
+    color: var(--collor-font-normal);
+    margin-left: 204px;
+    margin-top: 31px;
+    padding: 24px;
+}
+
+.title-card h4{
+    width: 302px;
+    height: 28px;
+}
+
+.recipe{
+    max-width: 940px;
+    margin-left: 230px;
+}
+
+.image-container{
+    text-align: center;
+}
+
+.image-container img {
+    border-radius: 15px;
+    width: 940px;  
+    height: 280px;
+    margin-bottom: 50px;
+}
+
+.image-container h1{
+    font-weight: 36px;
+    color: var(--collor-font-normal);
+    margin-bottom: 4px;
+}
+
+.image-container p{
+    font-weight: 20px;
+    color: var(--collor-font-small);
+    margin-bottom: 31px;
+}
+
+.details{
+    margin-bottom: 40px;
+}
+
+.details .subtitle{
+    margin-bottom: 19px ;
+}
+
+.details ul{
+    margin-bottom: 19px;
+    line-height: 28px;
+    color: #444444;
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color: #aa9b9b;
+    margin: 30px auto 0 auto;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 10px;
+}
+
+
+
