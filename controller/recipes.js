@@ -1,5 +1,5 @@
 const fs = require('fs')
-const data = require('../data')
+const data = require('../data.json')
 
 // pagina inicial
 exports.index = function (req, res) {
@@ -16,15 +16,24 @@ exports.about = function (req, res) {
 
 exports.allRecipes = function (req, res) {
 
-    return res.render("recipes", { items: data })
+    return res.render("recipes", { items: data.recipes })
 }
 
 //mostrar receita unica
 exports.show = function (req, res) {
-    const id = req.query.id
-    const data = recipes.find(function (data) {
-        return data.id == id
+    const { id } = req.params
+
+    const foundRecipe = data.recipes.find(function (recipe) {
+        return recipe.id == id
     })
 
-    return res.render("recipe", { item: data })
+    if (!foundRecipe) {
+        return res.send("Receita não encontrata!!!")
+    }
+
+    const recipe = {
+        ...foundRecipe,
+    }
+
+    return res.render("recipe", { item: recipe })
 }

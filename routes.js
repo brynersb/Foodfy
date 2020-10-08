@@ -11,7 +11,7 @@ routes.get("/about", recipes.about)
 routes.get("/recipes", recipes.allRecipes)
 
 
-routes.get("/recipe", recipes.show)
+routes.get("/recipe/:id", recipes.show)
 
 // server.use(function (req, res) {
 //     res.status(404).render("not-found");
