@@ -1,0 +1,118 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+   
+    <div class="banner container">
+
+            <div>
+                <h1>As melhores receitas</h1>
+                <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.<p>   
+            </div>
+
+            <img src="/assets/chef.png" alt="chef">    
+               
+
+    </div>
+
+
+    <div class="tittle-cards">
+        <h4>Mais Acessados</h4>
+    </div>
+
+    <section class="main_cards">
+        <div class="card">
+            <div class="card-img">
+                <img src="/assets/burger.png" alt="burger">
+            </div>
+            <div class="card-content">
+                <p>Super burger</p>
+                <span>Por fulano
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/assets/asinhas.png" alt="wings">
+            </div>
+            <div class="card-content">
+                <p>Asinhas de frango</p>
+                <span>Por fulano
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/assets/doce.png" alt="doce">
+            </div>
+            <div class="card-content">
+                <p>Chocolate caseiro</p>
+                <span>Por fulano
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/assets/espaguete.png" alt="pasta">
+            </div>
+            <div class="card-content">
+                <p>Espaguete a moda</p>
+                <span>Por fulano
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/assets/lasanha.png" alt="pasta2">
+            </div>
+            <div class="card-content">
+                <p>Lasanha Gourmet</p>
+                <span>Por fulano
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <img src="/assets/pizza.png" alt="pizza">
+            </div>
+            <div class="card-content">
+                <p>Pizza com massa caseira</p>
+                <span>Por fulano
+                </span>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Criado por Bryner Pereira</p>
+    </footer>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div class="modal-content">
+                <div class="card-img">
+                    <img src="/assets/pizza.png" alt="pizza">
+                </div>
+                <div class="card-content">
+                    <p>Pizza com massa caseira</p>
+                    <h5>Por fulano
+                    </h5>
+                    <a href="/details">Detalhes da Receita</a>
+                </div>
+                <div class="close-modal">
+                    <p>Fechar modal</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/scripts/script.js"></script>
+
+        {% endblock content %}

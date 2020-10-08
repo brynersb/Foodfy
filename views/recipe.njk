@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+         <title>Detalhes da Receita - Foodfy</title>
+{% endblock head %}
+
+
+{% block content%}
+    <main>
+        <section class="recipe">
+            <div id="img">
+                <img src="{{item.image}}" alt="">
+                <h3>{{item.title}}</h3>
+                <p>{{item.author}}</p>
+            </div>
+            
+            <div id="ingredientes">
+                <div class="subtitle">
+                    <h1>Ingredientes</h1>   <button class="esconder" onclick="Mudarestado('ingrediente')">Esconder</button>
+                </div>
+                <ul id="ingrediente"class='hide-ingredientes'>
+                
+                {%for ingredient in item.ingredients%} 
+                <li>{{ingredient}}</li> 
+
+                {%endfor%} 
+                </ul>
+            </div>
+            <div id="prepare">
+                <div class="subtitle">
+                    <h1>Modo de preparo</h1> <button class="mostrar">Mostrar</button>
+                </div>           
+                <p class='hide-prepare display'>{{item.preparation}}</p>
+            </div>
+            <div id="information">
+                <div class="subtitle">
+                    <h1>Informações adicionais</h1>   <button class="esconder-information">Esconder</button>
+                </div>
+                <p class='hide-information '>{{item.information}}</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripts/script.js"></script>
+    
+    <footer>
+        <p>Criado por Bryner Pereira</p>
+    </footer>
+
+    {%endblock%}
+

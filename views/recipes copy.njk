@@ -1,0 +1,57 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+         <title>Receitas - Foodfy</title>
+{% endblock head %}
+
+{% block content %}
+
+    <div class="tittle-cards">
+        <h4>Receitas</h4>
+    </div>
+ 
+    <section class="main_cards">
+        {% for item in items %}   
+            <div class="card">
+                <div class="card-img" id="{{item.id}}">
+                    <img src="/assets/{{item.id}}.png" alt="burger">
+                </div>
+                <div class="card-content">
+                    <p>{{item.name}}</p>
+                    <span>{{item.author}}</span>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    
+    <footer>
+        <p>Criado por Bryner Pereira</p>
+    </footer>
+    
+    
+
+    
+    <div class="modal-overlay">
+        <div class="modal">
+            
+            <div class="modal-content">
+                <div class="card-img">
+                    <img src="/assets/burger.png" alt="{{item.id}}">
+                </div>
+                <div class="card-content-modal">
+                    <p>Super Burguer</p>
+                    <h5>Por Dayvinho</h5>
+                    
+                    <a href="/recipe">Detalhes da Receita</a>
+                </div>
+                <div class="close-modal">
+                    <p>Fechar modal</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/scripts/script.js"></script>
+
+{% endblock content %}
