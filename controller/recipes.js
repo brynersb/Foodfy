@@ -39,13 +39,13 @@ exports.show = function (req, res) {
 
 //####### rotas de admin
 
-exports.indexAdmin = function(req, res) {
-    
+exports.indexAdmin = function (req, res) {
+
 
     return res.render('./admin/index.njk', { items: data.recipes })
 }
 
-exports.showAdmin = function(req, res) {
+exports.showAdmin = function (req, res) {
 
     const { id } = req.params
 
@@ -64,4 +64,12 @@ exports.showAdmin = function(req, res) {
     return res.render('./admin/recipe.njk', { item: recipe })
 }
 
+exports.create = function (req, res) {
 
+    return res.render("./admin/create")
+}
+
+exports.post = function (req, res){
+    
+    return res.recipe("./admin/index")
+}

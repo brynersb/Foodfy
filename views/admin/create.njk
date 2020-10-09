@@ -1,0 +1,52 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <title>Receitas - Foodfy</title>
+{% endblock head %}
+
+{% block content %}
+
+    <div class="title-cards">
+        <h4>Cadastro de Receitas</h4>
+        <button type="submit">Salvar receita</button>
+    </div>
+    <form class="form-recipe" action="/admin" method="POST">
+        <section>
+
+            <div class="recipe-item">
+                <div>Imagem da Receita</div>
+                <div class="image">
+                    <input type="url" name="image" placeholder="http://" value="">
+                </div>
+            </div>
+
+            <div id="ingredients" class="recipe-item">
+                <div>Ingredientes</div>
+                <div class="ingredient">
+                    <input type="text" name="ingredients[]" value="" placeholder="Ingrediente"/>
+                </div>
+            </div>
+            <button type="button" class="add-ingredient">Adicionar novo ingrediente</button>
+            
+
+            <div id="preparations" class="recipe-item">
+                <div>Modo de preparo</div>
+                <div class="preparation">
+                    <input type="text" name="preparation[]" value="" placeholder="Modo de preparo passo a passo"/>
+                </div>
+            </div>
+            <button type="button" class="add-preparation">Adicionar novo passo</button>
+            
+
+            <div class="recipe-item">
+                <div>Informações adicionais</div>
+                <div class="image">
+                    <input class="others" type="text" name="information" placeholder="Informações adicionais" value="">
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <script src="/scripts/scriptAdmin.js"></script>
+
+{% endblock content %}
